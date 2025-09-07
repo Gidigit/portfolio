@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Gideon Ngeno - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
+    <style>
+        /* Role animation styles */
+        .text-animation {
+            display: flex;
+            align-items: center;
+            height: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #role {
+            margin-left: 0.5rem;
+            font-weight: 600;
+            color: #00e6cc;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        #role.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <header class="header">
-        <a href="home" class="logo">Ngeno <span>Gideon</span></a>
+        <a href="#home" class="logo">Ngeno <span>Gideon</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home">Home</a>
@@ -21,8 +44,8 @@
     </header>    
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, It’s <span>Ngeno</span></h1>            
-            <h3 class="text-animation">I’m a&nbsp;<span id="role"> </span></h3>
+            <h1>Hi, It's <span>Ngeno</span></h1>            
+            <h3 class="text-animation">I'm a&nbsp;<span id="role">Web Developer</span></h3>
             <p>As a web designer with expertise in front-end development and UX/UI 
                 design, I create visually stunning and user-centric websites. By 
                 blending aesthetic design with intuitive functionality, I ensure 
@@ -39,7 +62,7 @@
             </div>
         </div>
         <div class="home-img">
-            <img src="1.jpg" alt="Profile Image">
+            <img src="1.jpg" alt="Gideon Ngeno - Web Developer">
         </div>
     </section>
 
@@ -47,9 +70,7 @@
         <h2 class="heading">Education</h2>
         <div class="timeline-items">
             <div class="timeline-item">
-                <div class="timeline-dot">
-                    <div class="timeline-data">2021</div>
-                </div>
+                <div class="timeline-dot">2021</div>
                 <div class="timeline-content">
                     <h3>College</h3>
                     <p>Completed College with a sharpened skills in 
@@ -57,9 +78,7 @@
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-dot">
-                    <div class="timeline-data">2015</div>
-                </div>
+                <div class="timeline-dot">2015</div>
                 <div class="timeline-content">
                     <h3>University</h3>
                     <p>Graduated from Jomo Kenyatta University 
@@ -70,9 +89,7 @@
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-dot">
-                    <div class="timeline-data">2021</div>
-                </div>
+                <div class="timeline-dot">2021</div>
                 <div class="timeline-content">
                     <h3>Internship</h3>
                     <p>Completed an internship at Moonlanding Technologies, 
@@ -82,6 +99,7 @@
             </div>
         </div>
     </section>
+    
     <section class="services" id="services">
         <h2 class="services-heading">My Expertise</h2>
         <div class="services-container">
@@ -89,46 +107,38 @@
                 <div class="services-info">
                     <h4>UI/UX Design</h4>
                     <p>Creating user-friendly and visually appealing digital interfaces, 
-                        ensuring a seamless and enjoyable experience for users. They blend 
-                        aesthetic design with functional usability to enhance overall 
-                        interaction.</p>
+                        ensuring a seamless and enjoyable experience for users.</p>
                 </div>
             </div>
             <div class="services-box">
                 <div class="services-info">
                     <h4>FrontEnd Development</h4>
                     <p>Building the visual and interactive elements of a website or 
-                        application that users interact with directly, using technologies 
-                        like HTML, CSS, and JavaScript. It ensures that the design is 
-                        implemented accurately and functions smoothly across different 
-                        devices and browsers.</p>
+                        application using HTML, CSS, and JavaScript.</p>
                 </div>
             </div>
             <div class="services-box">
                 <div class="services-info">
                     <h4>Back End Development</h4>
                     <p>Building and maintaining the server-side logic, databases, and APIs that 
-                        power the functionality of a website or application. They ensure that data is 
-                        processed and delivered correctly, enabling smooth and efficient operations 
-                        behind the scenes.</p>
+                        power the functionality of a website or application.</p>
                 </div>
             </div>
             <div class="services-box">
                 <div class="services-info">
                     <h4>Testing</h4>
                     <p>Evaluating software to identify and fix bugs, ensuring it functions 
-                        correctly and meets user requirements. It helps ensure that 
-                        applications are reliable, efficient, and provide a smooth user 
-                        experience before they are released.</p>
+                        correctly and meets user requirements.</p>
                 </div>
             </div>
         </div>
     </section>
+    
     <section class="testimonials" id="testimonials">
         <h2 class="heading">Testimonials</h2>
         <div class="testimonials-box">
             <div class="testimonial-item">
-                <img src="111.jpg" alt="Collins">
+                <div class="testimonial-avatar">C</div>
                 <h2>Collins</h2>
                 <div class="rating">
                     <i class='bx bxs-star'></i>
@@ -142,7 +152,7 @@
                     solutions.</p>
             </div>
             <div class="testimonial-item">
-                <img src="211.jpg" alt="Julia">
+                <div class="testimonial-avatar">J</div>
                 <h2>Julia</h2>
                 <div class="rating">
                     <i class='bx bxs-star'></i>
@@ -156,7 +166,7 @@
                     efficiently.</p>
             </div>
             <div class="testimonial-item">
-                <img src="3.jpg" alt="Leonard">
+                <div class="testimonial-avatar">L</div>
                 <h2>Leonard</h2>
                 <div class="rating">
                     <i class='bx bxs-star'></i>
@@ -171,41 +181,104 @@
             </div>
         </div>
     </section>
+    
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="">
+        <form action="https://formspree.io/f/your-form-id" method="POST">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="tel" name="phone" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Subject">
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
         </form>
     </section>
+    
     <footer class="footer">
         <div class="social">
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://www.linkedin.com/in/gideon-ngeno-5660bb266/"><i class='bx bxl-linkedin'></i></a>
             <a href="#"><i class='bx bxl-github'></i></a>
             <a href="#"><i class='bx bxl-twitter'></i></a>
         </div>
         <ul class="list">
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Testimonials</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
         </ul>
-        <p class="copyright">@Gideon Ngeno | All rights Reserved | Another product of <a href="https://moonlanding.onrender.com/">Moonlanding Technologies</a> </p>
+        <p class="copyright">© Gideon Ngeno | All rights Reserved | Another product of <a href="https://moonlanding.onrender.com/">Moonlanding Technologies</a></p>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu Toggle Functionality
+            const menuToggle = document.getElementById('menu-icon');
+            const navLinks = document.querySelector('.navbar');
+            const body = document.body;
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    menuToggle.classList.toggle('bx-x');
+                    body.classList.toggle('no-scroll');
+                });
+            }
+
+            // Role Changing Animation
+            const roleElement = document.getElementById('role');
+            
+            if (roleElement) {
+                const roles = ["Web Developer", "Systems Developer", "UI/UX Designer"];
+                let currentIndex = 0;
+                
+                // Initialize with first role
+                roleElement.textContent = roles[currentIndex];
+                setTimeout(() => {
+                    roleElement.classList.add('active');
+                    currentIndex = (currentIndex + 1) % roles.length;
+                }, 100);
+                
+                // Function to change role with smooth transition
+                function changeRole() {
+                    // Fade out current role
+                    roleElement.classList.remove('active');
+                    
+                    setTimeout(() => {
+                        // Update text content
+                        roleElement.textContent = roles[currentIndex];
+                        
+                        // Fade in new role
+                        setTimeout(() => {
+                            roleElement.classList.add('active');
+                        }, 50);
+                        
+                        // Update index for next role
+                        currentIndex = (currentIndex + 1) % roles.length;
+                    }, 500);
+                }
+                
+                // Start the role change process
+                setInterval(changeRole, 3000);
+            }
+
+            // Close menu when clicking on nav links
+            document.querySelectorAll('.navbar a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('bx-x');
+                    body.classList.remove('no-scroll');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
