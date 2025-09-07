@@ -152,54 +152,43 @@ h4 { font-size: 1.25rem; }
   font-weight: 500;
 }
 
-/* Role Animation Styles */
+/* Fix for role text animation */
 .text-animation {
-  display: flex;
-  align-items: center;
-  height: 2.5rem;
-  margin-bottom: 1rem;
-  min-width: 280px; /* Enough width for the longest role */
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 #role-container {
-  position: relative;
-  height: 100%;
-  width: auto;
-  display: inline-block;
-  margin-left: 0.5rem;
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    margin-left: 0.5rem;
+    min-width: 200px; /* Ensure enough space for the text */
 }
 
 #role {
-  position: absolute;
-  left: 0;
-  top: 0;
-  white-space: nowrap;
-  font-weight: 600;
-  color: var(--main-color);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--main-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 #role.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Typewriter cursor effect (optional) */
-/*
-#role::after {
-  content: '|';
-  animation: blink 1s infinite;
-  margin-left: 2px;
-  color: var(--main-color);
+/* Ensure the container has enough width for the longest role */
+.text-animation {
+    min-width: 280px; /* Adjust based on your longest role text */
 }
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-*/
 
 .home-content p {
   font-size: 1rem;
